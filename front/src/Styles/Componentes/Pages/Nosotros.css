@@ -1,0 +1,66 @@
+.nosotros {
+   display: flex;
+   align-items: center;
+  }
+
+
+  .nosotros__seccion {
+    display: flex;
+    align-items: center;
+   }
+
+  .image-side{
+    width: 50%;
+    flex: 1;
+    text-align: right;
+    padding: 20px;
+  }
+
+  .image-side img{
+    width: 500px;
+    height: 600px;
+  }
+  .text-side {
+    width: 50%;
+    flex-direction: 1;
+  }
+
+
+.text-side  h2{
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-family: 'Lora', serif;
+font-weight: 100;
+  text-align: center;
+}
+
+.text-side p{
+  color: gray;
+  font-size: 14px;
+  line-height: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  text-align: justify;
+  padding: 16px;
+}
+
+
+.text-right  h2{
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-family: 'Lora', serif;
+  text-align: left;
+  font-weight: 100;
+  padding: 16px;
+}
+
+.text-right p{
+  width: 80%;
+  color:gray;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+  padding: 16px;
+}

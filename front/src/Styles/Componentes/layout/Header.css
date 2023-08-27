@@ -1,0 +1,21 @@
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.header__titulo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.header__sub{
+    font-size: 12px;
+    text-align: center;
+}
