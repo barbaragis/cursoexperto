@@ -1,0 +1,41 @@
+<div class="lista">
+    <div class="saludo-sesion ">
+    <h1 class="saludo m-2"> Hola {{ usuario }}</h1>
+    <a class="sesion" href="/admin/login/logout"> Cerrar sesion </a>
+    </div>
+    <h1> Listado </h1>
+    <div class="d-flex justify-content-end mb-3">
+        <a href="/admin/promociones/agregar" class="btn btn-success"> Nuevo </a>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thread-dark">
+                    <tr>
+                        <tr scope="col"> # </tr>
+                        <tr scope="col"> Titulo </tr>
+                        <tr scope="col" > Imagen </tr>
+                        <tr scope="col" class="text-center"> Acciones </tr>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each promociones}}
+                    <tr>
+                        <th scope="row" {{id}}> 1 </th>
+                        <td> {{titulo}} </td>
+                        <td>{{{imagen}}} </td>
+                        <td class="text-center">
+                            <a href="/admin/promociones/editar/{{id}}" class="btn btn-sm btn-secondary"> 
+                                Editar
+                            </a>
+                                <a href="/admin/promociones/eliminar/{{id}}" class="btn btn-sm btn-secondary"> 
+                                Borrar
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

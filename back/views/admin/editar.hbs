@@ -1,0 +1,33 @@
+<div class="promocion-agregar">
+    <h1 class="titulo-promocion"> Editar promocion </h1>
+    <div class="mb-3">
+        <form action="/admin/promociones/editar" method="post" enctype="multipart/form-data">
+        <div>
+            <input type="hidden" value="{{promocion.id}}" name="id">
+            <label for="" >Titulo </label>
+            <input type="text" class="form-control" placeholder="titulo" name="titulo" value="{{promocion.titulo}}">
+            </div>
+            <div class="mb-3">
+                <label for="" >SubTitulo </label>
+                <input type="text" class="form-control" placeholder="subtitulo" name="subtitulo" value="{{promocion.subtitulo}}">
+            </div>
+            <div class="mb-3">
+                <label> Imagen : <input type="file" class="form-control" name="imagen" id="imagen" />
+                </label>
+                <p>
+                    <label> <input type="checkbox" name="img_delete" id="img_delete" value="1">  Eliminar imagen actual? </label>
+                    <input type="hidden" name="img_original" value="{{promocion.img_id}}">
+                </p>
+                <div class="mb-3">
+                    <label for="" >cuerpo </label>
+                    <textarea type="text" placeholder="cuerpo" name="cuerpo"> {{promocion.cuerpo}} </textarea>
+                </div>
+                <button type="submit" > Editar </button>
+        </form>
+{{#if error}}
+<p> {{message }} </p>
+{{/if}}
+
+    </div>
+
+</div>
