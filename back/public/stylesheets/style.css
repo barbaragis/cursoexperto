@@ -62,7 +62,6 @@ h1{
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 300px;
   margin: 0 auto 20px;
 }
 
@@ -72,8 +71,8 @@ h1{
   margin-bottom: 5px;
 }
 
+
 .form-control {
-  width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -274,4 +273,3 @@ textarea {
   color: #333; /* Color del texto */
   margin-bottom: 20px;
 }
-

@@ -1,6 +1,6 @@
 <div class="promocion-agregar">
-    <h1 class="titulo-promocion"> Editar promocion </h1>
-    <div class="mb-3">
+    <h1 class="titulo-promocion"> Editar promoción </h1>
+    <div class="mb-3 ">
         <form action="/admin/promociones/editar" method="post" enctype="multipart/form-data">
         <div>
             <input type="hidden" value="{{promocion.id}}" name="id">
@@ -19,7 +19,7 @@
                     <input type="hidden" name="img_original" value="{{promocion.img_id}}">
                 </p>
                 <div class="mb-3">
-                    <label for="" >cuerpo </label>
+                    <label for="" >Cuerpo </label>
                     <textarea type="text" placeholder="cuerpo" name="cuerpo"> {{promocion.cuerpo}} </textarea>
                 </div>
                 <button type="submit" > Editar </button>
