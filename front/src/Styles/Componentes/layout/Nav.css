@@ -1,35 +1,39 @@
 .nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: rgba(13, 27, 42, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 
 .links{
-    font-size: 12px;
-    color: #778DA9;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     gap: 30px;
     list-style: none;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .logo{
-    width: 200px;
+    width: 50px;
+    padding: 20px;
 }
 
-.navbar {
-    color: #778DA9; /* Color de texto de la barra de navegación */
-  }
+
 .navbar a {
     display: block; /* Convierte los enlaces en elementos de bloque */
-    color: #778DA9; /* Color de texto de los enlaces */
+    color: white; /* Color de texto de los enlaces */
     text-decoration: none; /* Elimina el subrayado de los enlaces */
     padding: 10px 20px; /* Espaciado interno para los enlaces */
   }
 
 .navbar a:hover{
-    color: black;
+    color: #354F52;
 }

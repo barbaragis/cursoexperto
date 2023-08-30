@@ -21,8 +21,11 @@ const Novedades = (props) =>{
     }, []);
 
     return(
+        <>
+        <div>
+            <h1 className="encabezado">NOVEDADES & PROMOCIONES </h1>
+        </div>
         <div className="promociones">
-            <h1 className="title">Promociones</h1>
             {loading ? (
                 <p> Cargando...</p>
             ) : (
@@ -30,6 +33,7 @@ const Novedades = (props) =>{
             title= {item.titulo} subtitle = {item.subtitulo} imagen={item.imagen} body={item.cuerpo} />)
             )}
         </div>
+        </>
     )
 }
 

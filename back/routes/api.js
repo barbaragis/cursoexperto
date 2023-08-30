@@ -10,8 +10,8 @@ router.get('/promociones', async function(req, res, next) {
     promociones = promociones.map(promociones => {
       if (promociones.img_id) {
         const imagen = cloudinary.url(promociones.img_id, {
-          width:960,
-          height:200,
+          width:800,
+          height:400,
           crop:'fill'
         });
         return {
@@ -34,7 +34,9 @@ router.post('/contacto' , async (req,res) =>{
   const mail = {
     to: 'gissibarbara@gmail.com',
     subjet : 'Contacto web',
-    html : `${req.body.nombre} se contacto a traves de la web y quiere mas informacion a este correo ${req.body.email} hizo el comentario ${req.body.mensaje} su tel es ${req.body.telefono}`
+    html : `${req.body.nombre} se contactó a traves de la web y solicita más información a este correo ${req.body.email} <br> 
+    Realizo el siguiente comentario :  ${req.body.mensaje} <br>
+    Su teléfono es : ${req.body.telefono}`
   }
 
   const transport = nodemailer.createTransport({
@@ -50,7 +52,7 @@ router.post('/contacto' , async (req,res) =>{
 
   res.status(201).json({
     error: false,
-    message: 'mensaje enviado'
+    message: 'Su mensaje ha sido enviado con éxito. Nos contactaremos a la brevedad'
   });
 })
 

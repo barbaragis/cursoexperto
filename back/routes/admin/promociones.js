@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var promocionesModel = require('../../models/PromocionesModel');
+var promocionesModel = require('../../models/promocionesModel');
 var util = require('util');
 var cloudinary = require('cloudinary').v2;
 const uploader = util.promisify(cloudinary.uploader.upload);
@@ -17,8 +17,8 @@ router.get('/', async function(req, res, next) {
   promociones = promociones.map(promocion => {
     if (promocion.img_id) {
       const imagen = cloudinary.image(promocion.img_id, {
-        width:50,
-        height:50,
+        width:200,
+        height:200,
         crop:'fill'
       });
       return {
@@ -78,7 +78,7 @@ router.post ('/agregar' , async (req , res , next) =>{
     res.render('admin/agregar', {
       layout: 'admin/layout',
       error: true,
-      message: 'no se cargo la informacion'
+      message: 'No se cargó la información'
     })
   }
 

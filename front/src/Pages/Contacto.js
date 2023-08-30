@@ -42,34 +42,49 @@ const Contacto = (props) =>{
 
 
     return(
-        <div className="form-container">
-            <h1 className="title">Título del artículo</h1>
-            <h2 className="subtitle">Subtítulo del artículo</h2>
-            <form action="/contacto" method="post" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label for="nombre"> nombre</label>
-                    <input type="text"name="nombre" value={formData.nombre} onChange={handleChange} />
-                </div>
-            <div className="form-group">
-                <label for="email">email</label>
-                <input type="text" name="email" value={formData.email} onChange={handleChange} />
-            </div>
-            <div className="form-group">
-                <label for="telefono">telefono</label>
-                <input type="text" name="telefono" value={formData.telefono} onChange={handleChange}/>
-            </div>
-            <div className="form-group">
-                <label for="message">Mensaje:</label>
-                <textarea name="mensaje" value={formData.mensaje} onChange={handleChange}></textarea>
-            </div>
-            <div className="form-group">
-
-                {enviando ?  <p> enviando...</p> : null}
-                {mensaje ? <p> {mensaje} </p> : null}
-                <input type="submit" value="Enviar"/>
-            </div>
-            </form>
+        <>
+        <div>
+            <h1 className="encabezado">CONTACTO</h1>
         </div>
+        <div className="contacto">
+            <div className="hotel__info">
+                <h3> New Garden Hotel </h3>
+                <div>
+                    <p> Avenida General Las Heras 1200 </p>
+                    <p> Recoleta , Buenos Aires</p>
+                    <p> Teléfono (+54 11) 4112-8558 </p>
+                    <p> WhatsApp (+54 11) 6547-1124 </p>
+                    <p> reservas@newgarden.com</p>
+                </div>
+            </div>
+            <div className="form-container">
+                <h2 className="subtitle">Nuestro equipo está disponible para atender cualquier solicitud.</h2>
+                <form action="/contacto" method="post" onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <label for="nombre"> Nombre </label>
+                        <input type="text"name="nombre" value={formData.nombre} onChange={handleChange} />
+                    </div>
+                    <div className="form-group">
+                        <label for="email"> Correo electrónico</label>
+                        <input type="text" name="email" value={formData.email} onChange={handleChange} />
+                    </div>
+                    <div className="form-group">
+                        <label for="telefono"> Teléfono</label>
+                        <input type="text" name="telefono" value={formData.telefono} onChange={handleChange}/>
+                    </div>
+                    <div className="form-group">
+                        <label for="message"> Mensaje :</label>
+                        <textarea name="mensaje" value={formData.mensaje} onChange={handleChange}></textarea>
+                    </div>
+                    <div className="form-group">
+                        {enviando ?  <p> Enviando...</p> : null}
+                        {mensaje ? <p> {mensaje} </p> : null}
+                        <input type="submit" value="Enviar"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </>
     )
     }
 

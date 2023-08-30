@@ -10,7 +10,7 @@ const Nav = () =>{
                 <ul className="navbar links">
                     <li > <Link to={"/"} > HOME </Link></li>
                     <li> <Link to={"/nosotros"} > NOSOTROS </Link></li>
-                    <li> <Link to={"/novedades"} > NOVEDADES </Link></li>
+                    <li> <Link to={"/novedades"} > NOVEDADES & PROMOCIONES  </Link></li>
                     <li> <Link to={"/contacto"} > CONTACTO </Link></li>
                 </ul>
             </div>

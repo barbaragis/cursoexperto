@@ -1,3 +1,17 @@
+.contacto{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+.hotel__info{
+  padding: 16px;
+  line-height: 30px;
+}
+
 .form-container {
     max-width: 400px;
     margin: 0 auto;
@@ -8,9 +22,12 @@
   }
 
   .form-group label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    letter-spacing: 1px;
   }
 
   .form-group input[type="text"],
@@ -22,7 +39,7 @@
   }
 
   .form-group input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #0D1B2A;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -31,7 +48,7 @@
   }
 
   .form-group input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #415A77;
   }
 
   .title {
